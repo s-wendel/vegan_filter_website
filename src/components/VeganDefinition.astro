@@ -1,0 +1,78 @@
+---
+import { VeganIngredientRuleManager } from "../typescript/VeganIngredientRuleManager"
+
+
+const veganIngredientRuleManager = new VeganIngredientRuleManager();
+
+---
+
+<div class="container">
+
+	<br>
+
+	<h2>Vegan</h2>
+
+	<br>
+
+	<h4>Definition of Vegan for Database Products</h4>
+
+	<br>
+
+	<p>A product containing no animal derived ingredients</p>
+
+	<br>
+
+	<p>For further clarification:</p>
+
+	<ul>
+		<li>Nothing involved</li>
+	</ul>
+
+	<br>
+
+	<h4>List of Ingredient Filters</h4>
+
+	<p>These are a list of filters that applies that every ingredient has to follow when using the Vegan filter. These are a work in progress and may not be one hundred percent accurate. If you find an issue or flaw, please</p>
+
+	<div class="container vegan-ingredient-rule-container">
+
+		{
+			veganIngredientRuleManager.getAllRules().map(rule => (
+
+				<div class="vegan-ingredient-rule">{rule.getIngredientRuleDescription()}</div>
+
+			))
+		}
+
+	</div>
+
+</div>
+
+
+<style>
+
+	.vegan-definition {
+
+		text-decoration: underline;
+		text-decoration-color: lightblue;
+  		text-decoration-color: rgba(255, 0, 0, 0); /* 30% opaque red */
+
+	}
+
+	.vegan-ingredient-rule-container {
+
+		display: flex;
+		column-gap: 8px;
+
+	}
+
+	.vegan-ingredient-rule {
+		
+		padding: 0px 8px;
+		background-color: white;
+		border-radius: 20px;
+		width: max-content;
+
+	}
+
+</style>

@@ -1,0 +1,33 @@
+---
+
+import VeganProductSearchBar from '../components/VeganProductSearchBar.astro';
+import VeganProductContainer from '../components/VeganProductContainer.astro';
+import VeganFilters from '../components/VeganFilters.astro';
+
+
+const products = [
+	{ productName: "Celsius (Cherry Cola)", imgSrc: "/Celsius.webp", ingredients: ["Bananas", "Apples", "Almonds"] },
+	{ productName: "Test 2", imgSrc: "public/Celsius.webp", ingredients: ["Tomatoes"] },
+	{ productName: "Test 3", ingredients: ["Onions"] },
+	{ productName: "Test 4", ingredients: ["Onions"] },
+	{ productName: "Test 5", ingredients: ["Onions"] },
+	{ productName: "Test 6", ingredients: ["Onions"] },
+	{ productName: "Test 7", ingredients: ["Onions"] },
+	{ productName: "Test 8", ingredients: ["Onions"] },
+	{ productName: "Test 9", ingredients: ["Onions"] },
+	{ productName: "Test 10", ingredients: ["Onions"] },
+
+];
+
+---
+
+<VeganFilters />
+
+<VeganProductSearchBar />
+
+<VeganProductContainer products = 
+		{products}
+	/>
+
+<style>
+</style>

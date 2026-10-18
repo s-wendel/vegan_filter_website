@@ -1,0 +1,48 @@
+---
+
+const { productName } = Astro.props;
+const { imgSrc } = Astro.props
+const { ingredients } = Astro.props;
+
+---
+
+<div class= "col d-flex justify-content-center vegan-product">
+
+	<div>
+
+		<img class="test" src={imgSrc} alt={"Image of " + productName} width="175px" height="175px"></img>
+	
+		<p class=""><b>{productName}</b></p>
+
+	</div>
+
+</div>
+
+<style>
+
+	.vegan-product {
+
+		padding: 20px 0px;
+
+	}
+
+	.test {
+
+		border-radius: 15px;
+
+	}
+
+	.div {
+
+		background-color: #F7F7F7;
+		border-radius: 15px;
+ 
+	}
+
+	.div-2 {
+
+		padding: 20px;
+
+	}
+
+</style>
